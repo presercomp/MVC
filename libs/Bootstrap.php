@@ -7,7 +7,7 @@ class Bootstrap
     private $_controllerPath  = 'controller/';
     private $_modelPath       = 'model/';
     private $_defaultFile     = 'index.php';
-    private $_errorFile       = 'error.php';
+    private $_errorFile       = 'fail.php';
     
     /**
      * Método de inicialización de la librería
@@ -141,7 +141,7 @@ class Bootstrap
         //requerimos el archivo de clase de errores
         require $this->_controllerPath.$this->_errorFile;
         //creamos instancia de la clase Error
-        $this->_controller = new Error();
+        $this->_controller = new Fail();
         //invocamos al método index del objeto Error
         $this->_controller->index($type);
         exit;

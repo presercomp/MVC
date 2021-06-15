@@ -1,11 +1,11 @@
 <?php
 
-class Error extends Controller {
+class Fail extends Controller {
     function __construct(){
         parent::__construct();
     }
 
     function index(string  $type){
-        $this->view->render('error', 'index');
+        $this->view->render('fail', 'index');
     }
 }
