@@ -79,6 +79,7 @@ class Bootstrap
             require $file;
             //e invocamos al método del controlador
             $this->_controller = new $controllerName();
+            $this->_controller->loadModel($this->_url[0]);
         } else {
             //Si no existe, invocamos al error 404 para desplegarlo
             $this->_error("404");
